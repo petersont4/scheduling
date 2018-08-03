@@ -1,0 +1,74 @@
+/* CSS Document */
+
+.staffMember{
+	width: 100px;
+	padding: 5px;
+	margin: 5px;
+	display: inline-block;
+	text-align: center;
+	border-left-style: solid;
+	border-left-width: 10px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+#scheduleTable tr{
+	height: 60px;
+	width: 100px;
+}
+
+.flexContainer{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#staff{
+	order: 1;
+	width: 23vw;
+	border-right: solid;
+	margin-right: 10px;
+	height: 90vh;
+	overflow: scroll;
+}
+
+#schedule{
+	order: 2;
+	width: 70vw;
+	height: 90vh;
+	overflow: scroll;
+}
+
+h1{
+	text-align: center;
+}
+
+.arrows{
+	color: black;
+	text-decoration: none;
+}
+/*Branch CSS Settings*/
+
+
+/*Department Settings*/
+.Childrens{
+	border-color: #F7901E;
+	background: #FD8813;
+}
+
+.Circulation{
+	border-color: #B16FAE;
+	background: #5C176B;
+	color: white;
+}
+
+.AdultServices{
+	border-color: #00B0DB;
+	background: #005E84;
+	color: white;
+}
+
+.LocalHistory{
+	border-color: #253E51;
+	background: #7F939F;
+	color: white;
+}
