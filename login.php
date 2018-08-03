@@ -1,7 +1,14 @@
 <?php
+include_once("assets/scripts.php");
 
 if(isset($_POST['username'])){
-	
+	echo "Enter";
+	if(authenticationSet($_POST['username'], $_POST['password'])){
+		echo "Success";
+	}
+	else{
+		echo "Fail";
+	}
 }
 
 ?>
