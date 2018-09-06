@@ -1,13 +1,14 @@
 <?php
 include_once("assets/scripts.php");
 
+$loginFailed = '';
+
 if(isset($_POST['username'])){
-	echo "Enter";
 	if(authenticationSet($_POST['username'], $_POST['password'])){
-		echo "Success";
+			header('Location: index.php');
 	}
 	else{
-		echo "Fail";
+		$loginFailed = true;
 	}
 }
 
@@ -34,7 +35,6 @@ if(isset($_POST['username'])){
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 20vh;
-		height: 60vh;
 		width: 40vh;
 		text-align: center;
 		box-shadow: 20px 20px 20px black;
@@ -69,15 +69,33 @@ if(isset($_POST['username'])){
 		color: #00B0DB;
 	}
 	
+	#failedLogin{
+		color: red;
+		background-color: #B8AEAF;
+		padding: 10px;
+		padding-left: 3vw;
+		padding-right: 3vw;
+		border-radius: 4px;
+	}
+	
 	</style>
 </head>
 
 <body>
 	<div class="loginBox">
 		<form action="" method="post">
-			<h2 style="padding-bottom: 60px;">KCPL Scheduling Login</h2>
+			<h2 >KCPL Scheduling Login</h2>
 			<br>
-			<input class="loginInput" type="text" name="username" id="username" placeholder="Username"><br>
+			<?php
+			if($loginFailed){
+				echo "<span id='failedLogin'>Incorrect Username or Password</span><br>";
+			}
+			else{
+				echo '<br>';
+			}
+			?>
+			<br>
+			<input class="loginInput" type="text" name="username" id="username" placeholder="Username"<?php if(isset($_POST['username'])){ echo "value=\"" . $_POST['username'] . "\""; } ?>><br>
 			<input class="loginInput" type="password" name="password" id="password" placeholder="Password"><br>
 			<input type="submit" name="submit" id="submit" value="Login"><br>
 			<br><br><br>

@@ -108,7 +108,7 @@ else{
 <head>
 <meta charset="UTF-8">
 <title>Calendar</title>
-<link rel="stylesheet" href="assets/main.css">
+<link rel="stylesheet" href="../assets/main.css">
 <style>
 	.calendar{
 		width: 50vw;

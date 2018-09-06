@@ -1,5 +1,5 @@
 <?php
-include_once("assets/scripts.php");
+include_once("../assets/scripts.php");
 
 $scheduleID = $_GET['scheduleID'];
 
